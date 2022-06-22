@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ metaTitle }}{% if metaTitle == blank %}{{ title }}{% endif %}{{ art.group }}{% if (title or art.group) == blank %}“{{ tag }}”{% endif %}</title>
+    <meta name="description" content="{{ description | safe }}">
+    <meta name="author" content="Liz Daly">
+    <meta name="generator" content="Eleventy">
+    <link rel="icon" href="/assets/favicon.ico" sizes="any">
+    <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/manifest.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alice&family=Montserrat:wght@500&family=Open+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+        {% set css %}{% include "styles.css" %}{% endset %}<style>{{ css | safe }}</style>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    </head>
+    <body class="no-js" onload="jscheck()">
+      <div class="wrapper">
+        
+        <header class="header {% if pageType == 'home' %}home{% endif %}">
+          <div class="visually-hidden"><a href="#content">Skip Content</a></div>
+            <div class="header-content">
+              <div class="color-primary font-large logo">{% if pageType !== "home" %}<a href="/" class="logo__link">{% endif %}LD{% if pageType !== "home" %}</a>{% endif %}</div
+              <nav class="nav"  aria-label="Primary navigation">
+                <ul class="nav-list">
+                  <li><a href="/" {% if pageType == "home" %}data-state="active"{% endif %}>Home</a></li>
+                  <li><a href="/about/" {% if pageType == "about" %}data-state="active"{% endif %}>About</a></li>
+                  {# <li><a href="/projects/" {% if category == "Projects" %}data-state="active"{% endif %}>Projects</a></li> #}
+                  <li><a href="https://github.com/lookupdaily" target="blank">Github</a></li>
+                  <li><a href="/CV" {% if pageType == "cv" %}data-state="active"{% endif %}>CV</a></li>
+                </ul>
+              </nav>
+            </div>
+        </header>
+        <main class="content {% if pageType == 'home' %}home{% endif %}" id="content">
+          {% if pageType !== 'home' %}
+          <header>
+                    <h1 class="title color-primary">{{ title }}</h1> 
+                    <p class="font-large">{{ description | safe }}</p>
+                </header>
+                {% endif %}
+            <div class="{% if pageType == 'cv' %}cv__content{% endif %}">
+            {{ content | safe }}
+            <div>
+        </main>
+        <footer class="footer {% if pageType == 'home' %}home{% endif %}">
+          <div class="footer__content">
+          <p>Made with <a href="https://www.11ty.dev/" target="blank" class="link--hover-secondary">Eleventy</a>, &copy;Liz Daly 2022</p>
+                <div class="social-links">
+          <p>Find me at @lookupdaily on</p>
+          <ul class="social-links__list">
+            <li>
+              <a href="https://www.linkedin.com/in/lookupdaily" target="_blank" class="link--hover-underline">
+              <img src="/assets/In-Blue-34.png" width="24" height="24">
+              <span class="visually-hidden">Linkedin</span></a>
+            </li>
+            <li>
+              <a href="https://github.com/lookupdaily" target="_blank" class="link--hover-underline">
+              <img src="/assets/GitHub-Mark-32px.png" width="24" height="24">
+              <span class="visually-hidden">Github</span></a>
+            </li>
+            <li>
+              <a href="https://instagram.com/lookupdaily" target="_blank" class="link--hover-underline">
+              <img src="/assets/Instagram_Glyph_Black.png" width="24" height="24">
+              <span class="visually-hidden">Instagram</span></a>
+            </li>
+          </ul>
+        </div>
+              </div>  
+        </footer>
+        </div>
+    </body>
+</html>
