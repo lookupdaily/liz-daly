@@ -1,14 +1,14 @@
 :root {
-  --color-primary: #4253F0;
+  --color-primary: #4253f0;
   --color-primary-dark: #0039cb;
   --color-primary-light: #768fff;
   --color-secondary: #ef9a9a;
   --color-secondary-dark: #ba6b6c;
   --color-grey: #575757;
-  --font-body: 'Open Sans', sans-serif;
-  --font-heading: 'Alice', serif;
-  --font-logo: 'Montserrat', sans-serif;
-  --icon-arrow: 'arrow_forward_ios';
+  --font-body: "Open Sans", sans-serif;
+  --font-heading: "Alice", serif;
+  --font-logo: "Montserrat", sans-serif;
+  --icon-arrow: "arrow_forward_ios";
   --icon-size-sm: 1.125rem;
   --icon-size-md: 1.5rem;
   --icon-size-lg: 2.25rem;
@@ -24,7 +24,7 @@ dd {
 html {
   font-family: var(--font-body);
   height: 100%;
-  box-sizing:border-box;
+  box-sizing: border-box;
   padding: 0;
 }
 
@@ -101,33 +101,37 @@ body {
 
 /* Link Styles */
 
-a, .link {
+a,
+.link {
   color: var(--color-primary);
-  padding: 0.2rem;
+  padding: 0.3rem;
+  margin: 0 -0.3rem;
+  border-radius: 2px;
 }
 
 a:visited {
   color: var(--color-primary);
 }
 
-a:hover {
+a:hover,
+a:focus {
   background-color: var(--color-primary);
   color: white;
 }
 
-a[data-state='active'] {
+a[data-state="active"] {
   border-bottom: 3px solid var(--color-secondary);
   text-decoration: none;
-  font-weight:500;
+  font-weight: 500;
 }
 
-a[data-state='active']:hover {
+a[data-state="active"]:hover {
   color: var(--color-primary);
   background-color: transparent;
   cursor: default;
 }
 
-.link { 
+.link {
   display: inline-flex;
   align-items: center;
 }
@@ -142,7 +146,7 @@ a[data-state='active']:hover {
   color: inherit;
 }
 
-.link--hover-secondary:hover {
+.link--hover-secondary:hover, .link--hover-secondary:focus {
   background-color: var(--color-secondary);
   color: black;
 }
@@ -174,7 +178,8 @@ h4 {
   color: var(--color-primary);
 }
 
-.title:hover, h1:hover {
+.title:hover,
+h1:hover {
   font-size: 4.5rem;
   color: var(--color-primary-dark);
 }
@@ -189,6 +194,7 @@ h4 {
   position: fixed;
   box-sizing: border-box;
   background: white;
+  height: 80px;
 }
 
 .header.home {
@@ -199,6 +205,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .logo {
@@ -227,7 +234,6 @@ h4 {
 
 .footer__content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   align-items: center;
   max-width: 1100px;
   margin: 0 auto;
@@ -239,8 +245,9 @@ h4 {
 
 .social-links {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+
+  flex-direction: column;
+  margin-bottom: 0.625rem;
 }
 
 .social-links__list {
@@ -252,27 +259,108 @@ h4 {
   line-height: 1rem;
 }
 
-.social-links__list li {
-  padding: 0.5rem;
+.social__links__description {
+  margin-bottom: 0.5rem;
+  margin-block-end: 0.5rem;
 }
 
 /* Navigation styles */
 
-.nav-list {
-  display: flex;
-  justify-content: flex-end;
-  list-style: none;
+#menu-button {
+  color: var(--color-primary);
+  background-color: transparent;
+  border: transparent;
+  outline: none;
+  padding: 0;
+}
+
+#menu-button:focus,
+#menu-button:active {
+  color: white;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+#button-text {
+  font-size: var(--icon-size-lg);
+}
+
+.nav {
+  display: none;
+  height: 0;
+  width: 0;
+  transition: height 1s ease-in, width 1s ease-in;
+  /* transition: width 2s ease-in; */
+}
+
+.nav__list {
+  list-style-type: none;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  width: 100%;
+  height: 100%;
+  align-items: stretch;
+  padding: 0;
 }
 
-.nav-list li {
-  padding: 0.625rem;
+.nav.expanded {
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: calc(100vh - 80px);
+  margin-top: 80px;
+  background: white;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  opacity: 1;
+  border-top: 1px solid var(--color-primary);
 }
 
-.nav-list--center {
+.nav.expanded .nav__list li {
+  flex-grow: 1;
+  display: block;
+  border-bottom: 1px solid var(--color-primary);
+  width: 100%;
+  font-size: 2rem;
+}
+
+.nav.expanded .nav__list li:last-child {
+  border-bottom: none;
+}
+
+.nav.expanded .nav__list .nav__list__item {
+  display: flex;
+  text-decoration: none;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  padding: 0;
+}
+
+.nav.expanded .nav__list .nav__link {
+  text-decoration: none;
+  font-family: var(--font-heading);
+}
+
+.nav.expanded .nav__list .nav__link:visited {
+  color: var(--color-primary);
+}
+
+.nav.expanded .nav__list .nav__link:focus {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.nav__list--center {
   justify-content: center;
 }
-
 
 /* List styles */
 
@@ -286,7 +374,7 @@ h4 {
 }
 
 .arrow-list li::before {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
   font-size: var(--icon-size-sm);
@@ -303,7 +391,7 @@ h4 {
 }
 
 .arrow-after::after {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
   font-size: var(--icon-size-md);
@@ -339,7 +427,7 @@ h4 {
 
 .home__subtitle {
   font-size: 1.5rem;
-  color:#000000;
+  color: #000000;
   margin: 0;
 }
 
@@ -356,7 +444,7 @@ h4 {
 /* Other styles */
 
 .visually-hidden {
-  height: 1px; 
+  height: 1px;
   overflow: hidden;
   width: 1px;
   position: absolute;
@@ -364,4 +452,43 @@ h4 {
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%); /* browsers in the future */
   white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .header {
+    height: auto;
+  }
+  .nav {
+    display: block;
+    height: auto;
+    width: auto;
+  }
+
+  #menu-button {
+    display: none;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .nav__list li {
+    padding: 0.625rem;
+  }
+
+  .footer__content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .social-links {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    order: 2;
+  }
+
+  .credit {
+    order: 1;
+  }
 }
