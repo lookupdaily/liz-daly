@@ -4,6 +4,7 @@
   --color-primary-light: #768fff;
   --color-secondary: #ef9a9a;
   --color-secondary-dark: #ba6b6c;
+  --color-secondary-light: #ffcccb;
   --color-grey: #575757;
   --font-body: "Open Sans", sans-serif;
   --font-heading: "Alice", serif;
@@ -109,6 +110,10 @@ a,
   border-radius: 2px;
 }
 
+.link a {
+  padding: 0;
+}
+
 a:visited {
   color: var(--color-primary);
 }
@@ -206,6 +211,7 @@ h1:hover {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -229,6 +235,11 @@ h1:hover {
 .footer {
   flex-shrink: 0;
   padding: 0.625rem 1.25rem;
+  background-color: var(--color-secondary-light);
+}
+
+.home.footer {
+  background-color: transparent;
   border-top: 1px solid var(--color-secondary);
 }
 
@@ -245,7 +256,6 @@ h1:hover {
 
 .social-links {
   display: flex;
-
   flex-direction: column;
   margin-bottom: 0.625rem;
 }
