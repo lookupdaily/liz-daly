@@ -141,6 +141,10 @@ body {
   color: inherit;
 }
 
+.link--hover-secondary, .link--hover-secondary:visited {
+  color: black;
+}
+
 .link--hover-secondary:hover, .link--hover-secondary:focus {
   background-color: var(--color-secondary);
   color: black;
