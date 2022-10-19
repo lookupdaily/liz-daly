@@ -17,4 +17,4 @@ I have been building applications and web components in Angular and React, and l
 
 ## Outside work
 
-When I'm not coding you can find me outside, with my hiking boots on or <a class="link" href="https://github.com/lookupdaily">looking up</a> at a great building. 
+When I'm not coding you can find me outside, with my hiking boots on or <a class="link" href="https://instagram.com/lookupdaily">looking up</a> at a great building. 
