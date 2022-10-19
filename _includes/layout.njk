@@ -27,11 +27,11 @@
               <button id="menu-button" aria-expanded="false"><span id="button-text" class="material-icons">menu</span></button>
               <nav class="nav" id="menu" aria-labelledy="menu-label">
                 <ul class="nav__list">
-                  <li class="nav__list__item"><a class="nav__link" href="/" {% if pageType == "home" %}data-state="active"{% endif %}><span class="nav__link__text">Home</span></a></li>
-                  <li class="nav__list__item"><a class="nav__link" href="/about/" {% if pageType == "about" %}data-state="active"{% endif %}><span class="nav__link__text">About</span></a></li>
+                  <li class="nav__list__item"><a class="link nav__link" href="/" {% if pageType == "home" %}data-state="active"{% endif %}><span class="nav__link__text">Home</span></a></li>
+                  <li class="nav__list__item"><a class="link nav__link" href="/about/" {% if pageType == "about" %}data-state="active"{% endif %}><span class="nav__link__text">About</span></a></li>
                   {# <li><a href="/projects/" {% if category == "Projects" %}data-state="active"{% endif %}><span class="nav__link__text">Projects</span></a></li> #}
-                  <li class="nav__list__item"><a class="nav__link" href="https://github.com/lookupdaily" target="blank"><span class="nav__link__text">Github</span></a></li>
-                  <li class="nav__list__item"><a class="nav__link" href="/CV" {% if pageType == "cv" %}data-state="active"{% endif %}><span class="nav__link__text">CV</span></a></li>
+                  <li class="nav__list__item"><a class="link nav__link" href="https://github.com/lookupdaily" target="blank"><span class="nav__link__text">Github</span></a></li>
+                  <li class="nav__list__item"><a class="link nav__link" href="/CV" {% if pageType == "cv" %}data-state="active"{% endif %}><span class="nav__link__text">CV</span></a></li>
                 </ul>
               </nav>
             </div>
@@ -49,14 +49,14 @@
         </main>
         <footer class="footer {% if pageType == 'home' %}home{% endif %}">
           <div class="footer__content">
-          <p class="social-links"><span>Find me at @lookupdaily on</span>
+          <p class="social-links"><span>Find me at @lookupdaily on </span>
             <span>
-              <a href="https://www.linkedin.com/in/lookupdaily" target="_blank" class="link--hover-secondary">Linkedin</a>,
-              <a href="https://github.com/lookupdaily" target="_blank" class="link--hover-secondary">Github</a>,
-              <a href="https://instagram.com/lookupdaily" target="_blank" class="link--hover-secondary">Instagram</a>.
+              <a href="https://www.linkedin.com/in/lookupdaily" target="_blank" class="link link--hover-secondary">Linkedin</a>,
+              <a href="https://github.com/lookupdaily" target="_blank" class="link link--hover-secondary">Github</a>,
+              <a href="https://instagram.com/lookupdaily" target="_blank" class="link link--hover-secondary">Instagram</a>.
             </span>
           </p>
-          <p class="credit">Made with <a href="https://www.11ty.dev/" target="blank" class="link--hover-secondary">Eleventy</a>, &copy;Liz Daly 2022</p>
+          <p class="credit">Made with <a href="https://www.11ty.dev/" target="blank" class="link link--hover-secondary">Eleventy</a>, &copy;Liz Daly 2022</p>
         </div>  
       </footer>
     </div>
