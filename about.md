@@ -1,5 +1,6 @@
 ---
 layout: layout.njk
+metaTitle: About Liz Daly
 title: Hello.
 pageType: about
 description: I'm Liz, a frontend developer based in London. I have recently taught myself to code and like to spend my time perfecting user experience and accessibility.
