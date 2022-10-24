@@ -36,6 +36,7 @@
               </nav>
             </div>
         </header>
+        <div class="scroll-wrapper">
         <main class="content {% if pageType == 'home' %}home{% endif %}" id="content">
           {% if pageType !== 'home' %}
             <div>
@@ -59,6 +60,7 @@
           <p class="credit">Made with <a href="https://www.11ty.dev/" target="blank" class="link link--hover-secondary">Eleventy</a>, &copy;Liz Daly 2022</p>
         </div>  
       </footer>
+      </div>
     </div>
   </body>
   {% set js %}{% include "init.js" %}{% endset %}<script>{{ js | safe }}</script>

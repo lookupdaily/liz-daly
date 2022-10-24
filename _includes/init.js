@@ -13,7 +13,6 @@ menuButton.addEventListener("click", () => {
     focusableEls = Array.from(menu.querySelectorAll(".nav__link"));
     firstFocusableEl = focusableEls[0];
     lastFocusableEl = focusableEls[focusableEls.length - 1];
-    firstFocusableEl.focus();
     menu.addEventListener("keydown", setFocusTrap);
   } else {
     menu.removeEventListener("keydown", setFocusTrap);
@@ -28,7 +27,6 @@ menuButton.addEventListener("click", () => {
         }
       } /* tab */ else {
         if (document.activeElement === lastFocusableEl) {
-          console.log("on last element");
           if (menuButton) {
             menuButton.focus();
           } else {
