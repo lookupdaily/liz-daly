@@ -1,0 +1,11 @@
+{
+  "name": "Liz Daly",
+  "icons": [
+    {
+      "src": "/assets/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "320x320"
+    }
+  ],
+  "display": "standalone"
+}
