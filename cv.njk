@@ -6,6 +6,8 @@ pageType: cv
 description:  User-focused web developer with a background in marketing for the arts and culture sector. I am interested in usability and accessibility and have strong experience in helping shape user requirements.
 ---
 
+{% from "./_includes/link.njk" import link %}
+
 <div>
   <section class="border-top--secondary">
     <h2>Tech skills</h2>
@@ -51,7 +53,7 @@ description:  User-focused web developer with a background in marketing for the 
 
   <section class="border-top--secondary">
     <h2>Other skills</h2>
-
+    {% include "./_includes/links-open-in-new-tab.njk" %}
     <dl class="arrow-list">
       <div class="list__item">
         <dt class="inline color-primary font-weight-bold">
@@ -73,7 +75,9 @@ description:  User-focused web developer with a background in marketing for the 
           <span class="arrow-after">Process driven</span>
         </dt>
         <dd class="inline">
-          Whilst learning to code at Makers I rediscovered my love for a good diagram. You can find <a class="link" href="https://github.com/lookupdaily/chitter-challenge">some examples of my approach</a> to developing solutions in my READMEs. I prefer to develop using TDD.
+          Whilst learning to code at Makers I rediscovered my love for a good diagram. You can find 
+          {{ link("some examples of my approach", "https://github.com/lookupdaily/chitter-challenge")}} 
+          to developing solutions in my READMEs. I prefer to develop using TDD.
         </dd>
       </div>
       <div class="list__item">
@@ -97,20 +101,28 @@ description:  User-focused web developer with a background in marketing for the 
   </section>
   <section class="border-top--secondary">
     <h2>Project experience</h2>
+    {% include "./_includes/links-open-in-new-tab.njk" %}
     <h3 class="margin-bottom-0">dxw - Developer</h3>
     <p class="margin-top-0">January 2023-present</p>
     <p>Building public services that improve lives.</p>
     <ul class="arrow-list padding-left-sm">
-      <li>I develop server side rendered applications in line with <a class="link" target="blank" href="https://playbook.dxw.com/tech/development-and-technical-operations-team-principles/">dxw's technology principles</a> which implement the GOV.UK design system and prioritise user needs, accessibility and maintainability.</li>
+      <li>I develop server side rendered applications in line with 
+        {{ link("dxw's technology principles", "https://playbook.dxw.com/tech/development-and-technical-operations-team-principles/")}}
+        which implement the GOV.UK design system and prioritise user needs, accessibility and maintainability.</li>
       <li>Delivering a new Application Programming Interface (API) to enable easier access to and analysis of <a class="link" href="https://pds.blog.parliament.uk/2024/04/17/changing-the-way-members-register-their-interests/">UK Parliaments's Members' Register of Financial Interests</a>, as well as improved access for members of the public via the Parliament website.</li>
-      <li>Launched the private beta of new internal product <a class="link" target="blank" href="https://github.com/DFE-Digital/find-information-about-academies-and-trusts">Find information about academedies and trusts</a> for the Department of Education which helped move the team reliance on legacy technology</li>
-      <li>Helped build and write content for dxw's first iteration of our <a class="link"  target="blank" href="https://github.com/dxw/accessibility-manual">accessibility manual</a>.</li>
+      <li>Launched the private beta of new internal product 
+        {{ link("Find information about academedies and trusts", "https://github.com/DFE-Digital/find-information-about-academies-and-trusts")}}
+        for the Department of Education which helped move the team reliance on legacy technology</li>
+      <li>Helped build and write content for dxw's first iteration of our 
+        {{ link("accessibility manual", "https://github.com/dxw/accessibility-manual")}}.</li>
     </ul>
 
     <h3 class="margin-bottom-0">Cognizant - Associate</h3>
     <p class="margin-top-0">September 2020-December 2023</p>
     <h4 class="color-primary">Intelligent Infrastructure / Full-stack developer</h4>
-    <p>Supporting the national roll-out of several key products for Network Rail as part of the <a class="link" href="https://www.networkrail.co.uk/running-the-railway/intelligent-infrastructure/" target="blank">Intelligent Infrastructure</a> programme—a five-year transformation programme focused on providing maintenance teams the insight they need to predict and prevent faults before they cause delays.</p>
+    <p>Supporting the national roll-out of several key products for Network Rail as part of the 
+      {{ link("Intelligent Infrastructure", "https://www.networkrail.co.uk/running-the-railway/intelligent-infrastructure/")}}
+      programme—a five-year transformation programme focused on providing maintenance teams the insight they need to predict and prevent faults before they cause delays.</p>
     <ul class="arrow-list padding-left-sm">
       <li>Deliver new product features in a small scrum team through the creation of fully tested UI components and APIs.</li>
       <li>Provide support for UAT testing phase and Early Life Support period by providing bug fixes.</li>
@@ -125,22 +137,35 @@ description:  User-focused web developer with a background in marketing for the 
   </section>
   <section class="border-top--secondary">
     <h2>Previous Experience</h2>
+    {% include "./_includes/links-open-in-new-tab.njk" %}
     <div class="item">
       <h3 class="margin-bottom-0">Waltham Forest Council - Project Lead, Communications Officer</h3>
       <p class="margin-top-0">November 2017-December 2019 (with a travel break)</p>
-      <p>Oversaw the launch of an online culture hub for the London Borough of Waltham Forest. Managed digital content and promotion before and during Waltham Forest's year as the first <a class="link" href="https://www.london.gov.uk/what-we-do/arts-and-culture/current-culture-projects/london-borough-culture" target="blank">London Borough of Culture</a> in 2019.</p>
+      <p>
+        Oversaw the launch of an online culture hub for the London Borough of Waltham Forest. Managed digital content and promotion before and during Waltham Forest's year as the first 
+        {{ link(
+          "London Borough of Culture", 
+          "https://www.london.gov.uk/programmes-strategies/arts-and-culture/current-culture-projects/london-borough-culture"
+        ) }}
+        in 2019.</p>
     </div>
 
     <div class="item">
       <h3 class="margin-bottom-0">New Designers - Marketing Manager</h3>
       <p class="margin-top-0">May-July 2019</p>
-      <p>Stepped in to deliver the final stages of the marketing campaign for <a class="link" href="https://www.newdesigners.com/" target="blank">New Designers</a> 2019 - the UK's #1 graduate design exhibition.</p>
+      <p>Stepped in to deliver the final stages of the marketing campaign for 
+        {{ link("New Designers", "https://www.newdesigners.com/")}}
+        2019 - the UK's #1 graduate design exhibition.</p>
     </div>
 
     <div class="item">
       <h3 class="margin-bottom-0">Media 10 - Marketing Manager</h3>
       <p class="margin-top-0">February 2013-October 2017 (Marketing Manager from 2016)</p>
-      <p>Produced tailored, data-driven campaigns for renowned trade events including <a class="link" href="https://www.clerkenwelldesignweek.com/" target="blank">Clerkenwell Design Week</a>, <a class="link" href="https://www.designlondon.co.uk/welcome" target="blank">100% Design</a> and <a class="link" href="https://www.designshanghai.com/" target="blank">Design Shanghai</a>. Worked with external and internal web development teams to manage new and existing websites for our growing portfolio, across a variety of web content management systems.</p>
+      <p>Produced tailored, data-driven campaigns for renowned trade events including 
+        {{ link("Clerkenwell Design Week", "https://www.clerkenwelldesignweek.com/")}}, 
+        100% Design, 
+        {{ link("Design Shanghai", "https://www.designshanghai.com/")}}.
+        Worked with external and internal web development teams to manage new and existing websites for our growing portfolio, across a variety of web content management systems.</p>
     </div>
 
     <div class="item">

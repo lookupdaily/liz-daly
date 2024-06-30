@@ -1,3 +1,5 @@
+{% from "./link.njk" import link %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -52,16 +54,20 @@
           <div class="footer__content">
           <p class="social-links"><span>Find me at @lookupdaily on </span>
             <span class="social-links__item">
-              <a href="https://github.com/lookupdaily" target="_blank" class="link link--hover-secondary">Github</a>, 
+              {{ link( "Github", "https://github.com/lookupdaily", "link--hover-secondary") }}, 
             </span>
             <span class="social-links__item">
-              <a href="https://www.linkedin.com/in/lookupdaily" target="_blank" class="link link--hover-secondary">Linkedin</a>, 
+              {{ link("Linkedin", "https://www.linkedin.com/in/lookupdaily", "link--hover-secondary")}}, 
             </span>
             <span class="social-links__item">
-              <a href="https://instagram.com/lookupdaily" target="_blank" class="link link--hover-secondary">Instagram</a>.
+              {{ link("Instagram", "https://instagram.com/lookupdaily", "link--hover-secondary")}}.
             </span>
           </p>
-          <p class="credit">Made with <a href="https://www.11ty.dev/" target="blank" class="link link--hover-secondary">Eleventy</a>, &copy;Liz Daly 2022</p>
+          <p class="credit">
+            Made with 
+            {{ link("Eleventy", "https://www.11ty.dev/", "link--hover-secondary")}}, 
+            &copy;Liz Daly 2022
+          </p>
         </div>  
       </footer>
       </div>
