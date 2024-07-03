@@ -1,0 +1,23 @@
+# This workflow will scan JavaScript files for formatting and linting issues. 
+# Keeping as a separate workflow to build and test so that we can see any build and test issues if this workflow fails.
+
+name: Lint
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  javascript:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      name: Check out repository
+    - uses: actions/setup-node@v4
+      name: Set up Node.js
+      with:
+        node-version: 20.15.0
+    - run: npm ci
+    - run: npm run lint
