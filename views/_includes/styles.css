@@ -8,6 +8,7 @@
   --color-grey: #575757;
   --font-body: "Open Sans", sans-serif;
   --font-heading: "Alice", serif;
+  --font-size-body: 1.1875rem;
   --font-logo: "Montserrat", sans-serif;
   --icon-arrow: "arrow_forward_ios";
   --icon-size-sm: 1.125rem;
@@ -24,6 +25,7 @@ dd {
 
 html {
   font-family: var(--font-body);
+  font-size: var(--font-size-body);
   height: 100%;
   box-sizing: border-box;
   padding: 0;
