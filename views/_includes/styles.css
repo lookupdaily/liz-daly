@@ -99,65 +99,6 @@ body {
   font-weight: bold;
 }
 
-/* Link Styles */
-
-.link {
-  color: var(--color-primary);
-  padding: 0 0.3rem;
-  margin: 0 -0.3rem;
-  border-radius: 2px;
-}
-
-.link a {
-  padding: 0;
-}
-
-.link:visited, .link a:visited {
-  color: var(--color-primary);
-}
-
-.link:hover,
-.link:focus {
-  background-color: var(--color-primary);
-  color: white;
-}
-
-.link[data-state="active"] {
-  border-bottom: 3px solid var(--color-secondary);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.link[data-state="active"]:hover {
-  color: var(--color-primary);
-  background-color: transparent;
-  cursor: default;
-}
-
-.link:hover {
-  background-color: var(--color-primary);
-  color: white;
-}
-
-.link:hover a {
-  background-color: transparent;
-  color: inherit;
-}
-
-.link--hover-secondary, .link--hover-secondary:visited {
-  color: black;
-}
-
-.link--hover-secondary:hover, .link--hover-secondary:focus {
-  background-color: var(--color-secondary);
-  color: black;
-}
-
-.link--hover-underline:hover {
-  background-color: transparent;
-  border-bottom: 3px solid var(--color-secondary);
-}
-
 /* Heading Styles */
 
 h2 {
@@ -350,17 +291,72 @@ h1:hover {
   font-family: var(--font-heading);
 }
 
-.nav.expanded .nav__list .nav__link:visited {
+.nav__list--center {
+  justify-content: center;
+}
+
+/* Link Styles */
+
+.link {
+  color: var(--color-primary);
+  padding: 0 0.3rem;
+  margin: 0 -0.3rem;
+  border-radius: 2px;
+}
+
+.link.arrow {
+  display: inline-flex;
+  align-items: center;
+}
+
+.link a {
+  padding: 0;
+}
+
+.link:visited, .link a:visited {
   color: var(--color-primary);
 }
 
-.nav.expanded .nav__list .nav__link:focus {
+.link:hover,
+.link:focus {
   background-color: var(--color-primary);
   color: white;
 }
 
-.nav__list--center {
-  justify-content: center;
+.link[data-state="active"] {
+  border-bottom: 3px solid var(--color-secondary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link[data-state="active"]:hover {
+  color: var(--color-primary);
+  background-color: transparent;
+  cursor: default;
+}
+
+.link:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.link:hover a {
+  background-color: transparent;
+  color: inherit;
+}
+
+.link--hover-secondary, .link--hover-secondary:visited {
+  color: black;
+}
+
+.link--hover-secondary:hover, .link--hover-secondary:focus {
+  background-color: var(--color-secondary);
+  color: black;
+}
+
+.link--hover-underline:hover {
+  background-color: transparent;
+  border-bottom: 3px solid var(--color-secondary);
 }
 
 /* List styles */
