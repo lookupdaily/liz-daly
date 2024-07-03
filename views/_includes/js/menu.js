@@ -6,38 +6,39 @@ menuButton.addEventListener("click", () => {
   let focusableEls;
   let firstFocusableEl;
   let lastFocusableEl;
-  const isMenuOpen = !menu.classList.contains("expanded");
+  let isMenuOpen;
   toggleMenu();
 
   if (isMenuOpen) {
-    focusableEls = Array.from(menu.querySelectorAll(".nav__link"));
+    focusableEls = Array.from(menu.querySelectorAll("a"));
+    console.log(focusableEls);
     firstFocusableEl = focusableEls[0];
     lastFocusableEl = focusableEls[focusableEls.length - 1];
-    menu.addEventListener("keydown", setFocusTrap);
+    document.addEventListener("keydown", setFocusTrap);
   } else {
-    menu.removeEventListener("keydown", setFocusTrap);
+    document.removeEventListener("keydown", setFocusTrap);
   }
 
   function setFocusTrap(e) {
+    console.log(e)
+    console.log(e.key)
     if (e.key === "Tab") {
       if (e.shiftKey) {
-        /* shift + tab */ if (document.activeElement === firstFocusableEl) {
+        /* shift + tab */ 
+        if (document.activeElement === firstFocusableEl) {
           lastFocusableEl.focus();
           e.preventDefault();
         }
       } /* tab */ else {
         if (document.activeElement === lastFocusableEl) {
-          if (menuButton) {
-            menuButton.focus();
-          } else {
-            firstFocusableEl.focus();
-          }
+          menuButton.focus();
           e.preventDefault();
         }
       }
     }
 
     if (e.key === "Escape") {
+      e.preventDefault();
       toggleMenu();
       menuButton.focus();
       menu.removeEventListener('keydown',setFocusTrap);
@@ -45,9 +46,10 @@ menuButton.addEventListener("click", () => {
   }
 
   function toggleMenu() {
+    isMenuOpen = !menu.classList.contains("expanded");
     menuButton.setAttribute("aria-expanded", isMenuOpen);
     menu.classList.toggle("expanded");
-    buttonText.innerText = isMenuOpen ? "close" : "menu";
+    buttonText.innerHTML = isMenuOpen ? "close" : "menu";
   }
 });
 
