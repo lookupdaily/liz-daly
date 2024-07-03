@@ -1,3 +1,5 @@
+{% from "./link.njk" import link %}
+
 <span hidden id="menu-label">Main menu</span>
 <button id="menu-button" aria-expanded="false"><span id="button-text" class="material-icons">menu</span></button>
 <nav class="nav" id="menu" aria-labelledy="menu-label">
@@ -5,7 +7,9 @@
     <li class="nav__list__item"><a class="link nav__link" href="/" {% if pageType == "home" %}data-state="active"{% endif %}><span class="nav__link__text">Home</span></a></li>
     <li class="nav__list__item"><a class="link nav__link" href="/about/" {% if pageType == "about" %}data-state="active"{% endif %}><span class="nav__link__text">About</span></a></li>
     {# <li><a href="/projects/" {% if category == "Projects" %}data-state="active"{% endif %}><span class="nav__link__text">Projects</span></a></li> #}
-    <li class="nav__list__item"><a class="link nav__link" href="https://github.com/lookupdaily" target="blank"><span class="nav__link__text">Github</span></a></li>
     <li class="nav__list__item"><a class="link nav__link" href="/CV" {% if pageType == "cv" %}data-state="active"{% endif %}><span class="nav__link__text">CV</span></a></li>
+    <li class="nav__list__item">
+      {{ link("GitHub", "https://github.com/lookupdaily", "nav__link")}}
+    </li>
   </ul>
 </nav>
