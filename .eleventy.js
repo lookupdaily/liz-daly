@@ -1,10 +1,10 @@
 module.exports = (eleventyConfig) => {
-	eleventyConfig.addPassthroughCopy("assets");
+	eleventyConfig.addPassthroughCopy("src/assets");
 
 	return {
 		passthroughFileCopy: true,
 		dir: {
-			input: "views",
+			input: "src/views",
 		},
 	};
 };
