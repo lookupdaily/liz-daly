@@ -9,8 +9,8 @@
 		"test: watchLatest": "jest --watch",
 		"build": "eleventy",
 		"start": "eleventy --serve",
-		"lint": "npx @biomejs/biome ci . && npx stylelint '**/*.css'",
-		"lint:fix": "npx @biomejs/biome check --write . && npx stylelint '**/*.css' --fix"
+		"lint": "npx @biomejs/biome ci . && npx stylelint 'src/**/*.css'",
+		"lint:fix": "npx @biomejs/biome check --write . && npx stylelint 'src/**/*.css' --fix"
 	},
 	"keywords": [],
 	"author": "",
