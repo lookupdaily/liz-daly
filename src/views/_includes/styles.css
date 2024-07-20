@@ -6,10 +6,13 @@
   --color-secondary-dark: #ba6b6c;
   --color-secondary-light: #ffcccb;
   --color-grey: #575757;
+  --color-white: #ffffff;
+  --color-black: #000000;
   --font-body: "Open Sans", sans-serif;
   --font-heading: "Alice", serif;
   --font-size-body: 1.1875rem;
   --font-logo: "Montserrat", sans-serif;
+  --font-icons: "Material Icons", sans-serif;
   --icon-arrow: "arrow_forward_ios";
   --icon-size-sm: 1.125rem;
   --icon-size-md: 1.5rem;
@@ -137,12 +140,14 @@ h1:hover {
 
 .header {
   flex-shrink: 0;
+
   /* border-bottom: 1px solid var(--color-primary); */
   padding: 1.25rem;
   width: 100%;
+
   /* position: fixed; */
   box-sizing: border-box;
-  background: white;
+  background: var(--color-white);
   height: 80px;
 }
 
@@ -195,7 +200,7 @@ h1:hover {
 }
 
 .footer a {
-  color: black;
+  color: var(--color-black);
 }
 
 .social-links {
@@ -210,22 +215,23 @@ h1:hover {
 
 /* Navigation styles */
 
-#menu-button {
+.nav__button {
   color: var(--color-primary);
   background-color: transparent;
   border: transparent;
   outline: none;
   padding: 0;
+  cursor: pointer;
 }
 
-#menu-button:focus,
-#menu-button:active {
-  color: white;
+.nav__button:focus,
+.nav__button:active {
+  color: var(--color-white);
   background-color: var(--color-primary);
   border-color: var(--color-primary);
 }
 
-#button-text {
+.material-icons.nav__button-text {
   font-size: var(--icon-size-lg);
 }
 
@@ -234,7 +240,6 @@ h1:hover {
   height: 0;
   width: 0;
   transition: height 1s ease-in, width 1s ease-in;
-  /* transition: width 2s ease-in; */
 }
 
 .nav__list {
@@ -255,7 +260,7 @@ h1:hover {
   width: 100vw;
   height: calc(100vh - 80px);
   margin-top: 80px;
-  background: white;
+  background: var(--color-white);
   z-index: 1;
   left: 0;
   top: 0;
@@ -322,7 +327,7 @@ h1:hover {
 .link:hover,
 .link:focus {
   background-color: var(--color-primary);
-  color: white;
+  color: var(--color-white);
 }
 
 .link[data-state="active"] {
@@ -339,7 +344,7 @@ h1:hover {
 
 .link:hover {
   background-color: var(--color-primary);
-  color: white;
+  color: var(--color-white);
 }
 
 .link:hover a {
@@ -348,12 +353,12 @@ h1:hover {
 }
 
 .link--hover-secondary, .link--hover-secondary:visited {
-  color: black;
+  color: var(--color-black);
 }
 
 .link--hover-secondary:hover, .link--hover-secondary:focus {
   background-color: var(--color-secondary);
-  color: black;
+  color: var(--color-black);
 }
 
 .link--hover-underline:hover {
@@ -373,7 +378,7 @@ h1:hover {
 }
 
 .arrow-list li::before {
-  font-family: "Material Icons";
+  font-family: var(--font-icons);
   font-weight: normal;
   font-style: normal;
   font-size: var(--icon-size-sm);
@@ -390,7 +395,7 @@ h1:hover {
 }
 
 .arrow-after::after {
-  font-family: "Material Icons";
+  font-family: var(--font-icons);
   font-weight: normal;
   font-style: normal;
   font-size: var(--icon-size-md);
@@ -426,7 +431,7 @@ h1:hover {
 
 .home__subtitle {
   font-size: 1.5rem;
-  color: #000000;
+  color: var(--color-black);
   margin: 0;
 }
 
@@ -462,16 +467,18 @@ h1:hover {
   .scroll-wrapper {
     overflow:initial;
   }
+
   .header {
     height: auto;
   }
+
   .nav {
     display: block;
     height: auto;
     width: auto;
   }
 
-  #menu-button {
+  .nav__button {
     display: none;
   }
 
