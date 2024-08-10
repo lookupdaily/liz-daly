@@ -38,8 +38,8 @@ body {
 }
 
 .wrapper {
- min-height: 100vh;
- display: flex;
+  min-height: 100vh;
+  display: flex;
   flex-direction: column;
   justify-content: stretch;
   overflow: hidden;
@@ -315,7 +315,8 @@ h1:hover {
   padding: 0;
 }
 
-.link:visited, .link a:visited {
+.link:visited,
+.link a:visited {
   color: var(--color-primary);
 }
 
@@ -347,11 +348,13 @@ h1:hover {
   color: inherit;
 }
 
-.link--hover-secondary, .link--hover-secondary:visited {
+.link--hover-secondary,
+.link--hover-secondary:visited {
   color: black;
 }
 
-.link--hover-secondary:hover, .link--hover-secondary:focus {
+.link--hover-secondary:hover,
+.link--hover-secondary:focus {
   background-color: var(--color-secondary);
   color: black;
 }
@@ -460,7 +463,7 @@ h1:hover {
   }
 
   .scroll-wrapper {
-    overflow:initial;
+    overflow: initial;
   }
   .header {
     height: auto;
@@ -496,7 +499,7 @@ h1:hover {
   }
 
   .social-links span:first-child {
-   margin-right: 5px;
+    margin-right: 5px;
   }
 
   .credit {
