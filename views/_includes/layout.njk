@@ -40,20 +40,20 @@
             {{ content | safe }}
           <div>
         </main>
-        <footer class="footer {% if pageType == 'home' %}home{% endif %}">
-          <div class="footer__content">
-          <p class="social-links"><span>Find me at @lookupdaily on </span>
-            <span class="social-links__item">
+        <footer class="ld-footer {% if pageType == 'home' %}home{% endif %}">
+          <div class="ld-footer__content">
+          <p class="ld-social-links"><span>Find me at @lookupdaily on </span>
+            <span class="ld-social-links__item">
               {{ link( "GitHub", "https://github.com/lookupdaily", "link--hover-secondary") }}, 
             </span>
-            <span class="social-links__item">
+            <span class="ld-social-links__item">
               {{ link("Linkedin", "https://www.linkedin.com/in/lookupdaily", "link--hover-secondary")}}, 
             </span>
-            <span class="social-links__item">
+            <span class="ld-social-links__item">
               {{ link("Instagram", "https://instagram.com/lookupdaily", "link--hover-secondary")}}.
             </span>
           </p>
-          <p class="credit">
+          <p class="ld-footer__credit">
             Made with 
             {{ link("Eleventy", "https://www.11ty.dev/", "link--hover-secondary")}}, 
             &copy;Liz Daly 2022
