@@ -30,14 +30,7 @@ describe("menu", () => {
 			expect(locators.button.getAttribute("aria-expanded")).toBe("true");
 		});
 
-		it("sets button text to close", () => {
-			expect(locators.button).toHaveTextContent("close");
-		});
-
-		it("prevents tabbing outside menu", async () => {
-			await user.keyboard("[Tab]");
-			expect(locators.button).toHaveFocus();
-
+		it("closes menu on tabbing to the end", async () => {
 			await user.keyboard("[Tab]");
 			expect(locators.firstNavLink).toHaveFocus();
 
@@ -50,15 +43,7 @@ describe("menu", () => {
 			await user.keyboard("[Tab]");
 			expect(locators.outsideLink).not.toHaveFocus();
 			expect(locators.button).toHaveFocus();
-		});
-
-		it("if shift + tab are pressed, should tab between last and first", async () => {
-			await user.keyboard("[Tab]");
-			await user.keyboard("[Tab]");
-			expect(locators.firstNavLink).toHaveFocus();
-
-			await user.keyboard("{Shift>}[Tab]{/Shift}");
-			expect(locators.lastNavLink).toHaveFocus();
+			expect(locators.menu).not.toHaveClass("expanded");
 		});
 	});
 
