@@ -1,0 +1,29 @@
+@use "node_modules/@lookupdaily/styles/scss" as ld;
+
+/* Home page styles */
+
+.content.home {
+  @include ld.padding-top();
+}
+
+.home__header {
+  @include ld.margin-bottom("x-large");
+}
+
+/* CV Page styles */
+
+.cv__content section {
+  @include ld.padding("x-large", "none");
+}
+
+.experience-item {
+  @include ld.margin-bottom("x-large");
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__dates {
+    margin-top: 0;
+  }
+}

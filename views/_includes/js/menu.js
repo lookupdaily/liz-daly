@@ -1,49 +1,39 @@
 const menuButton = document.getElementById("menu-button");
 const menu = document.getElementById("menu");
-const buttonText = document.getElementById("button-text");
 
-menuButton.addEventListener("click", () => {
+menuButton.addEventListener("click", toggleMenu);
+
+function toggleMenu() {
 	let focusableEls;
-	let firstFocusableEl;
 	let lastFocusableEl;
-	let isMenuOpen;
-	toggleMenu();
+
+	const isMenuOpen = !menu.classList.contains("expanded");
+	menuButton.setAttribute("aria-expanded", isMenuOpen);
+	menu.classList.toggle("expanded");
 
 	if (isMenuOpen) {
 		focusableEls = Array.from(menu.querySelectorAll("a"));
-		firstFocusableEl = focusableEls[0];
 		lastFocusableEl = focusableEls[focusableEls.length - 1];
 		document.addEventListener("keydown", setFocusTrap);
 	} else {
 		document.removeEventListener("keydown", setFocusTrap);
 	}
 
+	menuButton.focus();
+
 	function setFocusTrap(e) {
-		if (e.key === "Tab") {
-			if (e.shiftKey) {
-				/* shift + tab */
-				if (document.activeElement === firstFocusableEl) {
-					lastFocusableEl.focus();
-					e.preventDefault();
-				}
-			} /* tab */ else if (document.activeElement === lastFocusableEl) {
-				menuButton.focus();
-				e.preventDefault();
-			}
+		if (
+			e.key === "Tab" &&
+			!e.shiftKey &&
+			document.activeElement === lastFocusableEl
+		) {
+			e.preventDefault();
+			toggleMenu();
 		}
 
 		if (e.key === "Escape") {
 			e.preventDefault();
 			toggleMenu();
-			menuButton.focus();
-			menu.removeEventListener("keydown", setFocusTrap);
 		}
 	}
-
-	function toggleMenu() {
-		isMenuOpen = !menu.classList.contains("expanded");
-		menuButton.setAttribute("aria-expanded", isMenuOpen);
-		menu.classList.toggle("expanded");
-		buttonText.innerHTML = isMenuOpen ? "close" : "menu";
-	}
-});
+}

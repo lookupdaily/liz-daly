@@ -7,8 +7,8 @@
 		"test": "jest",
 		"test: watch": "jest --watchAll",
 		"test: watchLatest": "jest --watch",
-		"build:sass": "sass --no-source-map --style=compressed styles/index.scss _site/styles.css",
-		"watch:sass": "sass styles/index.scss _site/styles.css --watch",
+		"build:sass": "sass --no-source-map --style=compressed index.scss _site/styles.css",
+		"watch:sass": "sass index.scss _site/styles.css --watch",
 		"build:eleventy": "eleventy",
 		"watch:eleventy": "eleventy --serve",
 		"build": "npm run build:sass & npm run build:eleventy",
@@ -30,6 +30,7 @@
 		"babel-jest": "^29.7.0",
 		"jest": "^29.7.0",
 		"jest-environment-jsdom": "^29.7.0",
-		"sass": "^1.77.8"
+		"sass": "^1.77.8",
+		"@lookupdaily/styles": "1.0.4"
 	}
 }
