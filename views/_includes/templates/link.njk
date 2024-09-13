@@ -1,3 +1,3 @@
 {% macro link(linkText, href, classes = "", opensInNewTab = true) %}
-  <a class="link {{ classes }}" href="{{ href }}" {% if opensInNewTab %}rel="noreferrer noopener" target="blank"{% endif %}>
+  <a class="ld-link {{ classes }}" href="{{ href }}" {% if opensInNewTab %}rel="noreferrer noopener" target="blank"{% endif %}>
     {{ linkText }}{% if opensInNewTab %}<span class="visually-hidden">(opens in a new tab)</span>{% endif %}</a>{% endmacro %}

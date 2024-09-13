@@ -5,14 +5,14 @@
 <nav class="ld-header-nav" id="menu" aria-labelledy="menu-label">
   <ul class="ld-header-nav__list">
     <li class="ld-header-nav__item">
-      <a class="link ld-header-nav__link" href="/" {% if pageType == "home" %}data-state="active"{% endif %}><span class="nav__link__text">Home</span></a>
+      <a class="ld-link ld-header-nav__link" href="/" {% if pageType == "home" %}data-state="active"{% endif %}><span class="nav__link__text">Home</span></a>
       </li>
     <li class="ld-header-nav__item">
-      <a class="link ld-header-nav__link" href="/about/" {% if pageType == "about" %}data-state="active"{% endif %}><span class="nav__link__text">About</span></a>
+      <a class="ld-link ld-header-nav__link" href="/about/" {% if pageType == "about" %}data-state="active"{% endif %}><span class="nav__link__text">About</span></a>
     </li>
     {# <li><a href="/projects/" {% if category == "Projects" %}data-state="active"{% endif %}><span class="nav__link__text">Projects</span></a></li> #}
     <li class="ld-header-nav__item">
-      <a class="link ld-header-nav__link" href="/CV" {% if pageType == "cv" %}data-state="active"{% endif %}><span class="nav__link__text">CV</span></a>
+      <a class="ld-link ld-header-nav__link" href="/CV" {% if pageType == "cv" %}data-state="active"{% endif %}><span class="nav__link__text">CV</span></a>
     </li>
     <li class="ld-header-nav__item">
       {{ link("GitHub", "https://github.com/lookupdaily", "ld-header-nav__link")}}
