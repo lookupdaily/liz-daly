@@ -1,21 +1,21 @@
 {% from "./link.njk" import link %}
 
 <span hidden id="menu-label">Main menu</span>
-<button id="menu-button" aria-expanded="false"><span id="button-text" class="material-icons">menu</span></button>
-<nav class="nav" id="menu" aria-labelledy="menu-label">
-  <ul class="nav__list">
-    <li class="nav__list__item">
-      <a class="link nav__link" href="/" {% if pageType == "home" %}data-state="active"{% endif %}><span class="nav__link__text">Home</span></a>
+<button class="ld-header__menu-button" id="menu-button" aria-expanded="false"><span class="ld-header__menu-button-text">Menu</span></button>
+<nav class="ld-header-nav" id="menu" aria-labelledy="menu-label">
+  <ul class="ld-header-nav__list">
+    <li class="ld-header-nav__item">
+      <a class="link ld-header-nav__link" href="/" {% if pageType == "home" %}data-state="active"{% endif %}><span class="nav__link__text">Home</span></a>
       </li>
-    <li class="nav__list__item">
-      <a class="link nav__link" href="/about/" {% if pageType == "about" %}data-state="active"{% endif %}><span class="nav__link__text">About</span></a>
+    <li class="ld-header-nav__item">
+      <a class="link ld-header-nav__link" href="/about/" {% if pageType == "about" %}data-state="active"{% endif %}><span class="nav__link__text">About</span></a>
     </li>
     {# <li><a href="/projects/" {% if category == "Projects" %}data-state="active"{% endif %}><span class="nav__link__text">Projects</span></a></li> #}
-    <li class="nav__list__item">
-      <a class="link nav__link" href="/CV" {% if pageType == "cv" %}data-state="active"{% endif %}><span class="nav__link__text">CV</span></a>
+    <li class="ld-header-nav__item">
+      <a class="link ld-header-nav__link" href="/CV" {% if pageType == "cv" %}data-state="active"{% endif %}><span class="nav__link__text">CV</span></a>
     </li>
-    <li class="nav__list__item">
-      {{ link("GitHub", "https://github.com/lookupdaily", "nav__link")}}
+    <li class="ld-header-nav__item">
+      {{ link("GitHub", "https://github.com/lookupdaily", "ld-header-nav__link")}}
     </li>
   </ul>
 </nav>
