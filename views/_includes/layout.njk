@@ -19,10 +19,10 @@
     <div class="wrapper">
       <header class="ld-header {% if pageType == 'home' %}home{% endif %}">
         <div class="visually-hidden"><a href="#content">Skip Content</a></div>
-                      <div class="ld-logo">{% if pageType !== "home" %}<a href="/" class="ld-logo__link">{% endif %}LD{% if pageType !== "home" %}</a>{% endif %}</div>
-              {% include "./templates/menu.njk" %}
-                    </header>
-        <div class="scroll-wrapper">
+            <div class="ld-logo">{% if pageType !== "home" %}<a href="/" class="ld-logo__link">{% endif %}LD{% if pageType !== "home" %}</a>{% endif %}</div>
+            {% include "./templates/menu.njk" %}
+        </header>
+
         <main class="content {% if pageType == 'home' %}home{% endif %}" id="content">
           {% if pageType !== 'home' %}
             <div>
@@ -54,7 +54,6 @@
           </p>
         </div>  
       </footer>
-      </div>
     </div>
   </body>
   {% set js %}{% include "js/menu.js" %}{% endset %}<script>{{ js | safe }}</script>
