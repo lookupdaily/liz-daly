@@ -17,6 +17,9 @@
   </head>
   <body>
     <div class="wrapper">
+      <script>
+        document.body.className += ' js-enabled';
+      </script>
       {% include "./templates/header.njk" %}
 
       <main class="content {% if pageType == 'home' %}home{% endif %}" id="content">
