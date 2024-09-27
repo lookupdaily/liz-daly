@@ -6,6 +6,9 @@
 			"all": true,
 			"nursery": {
 				"all": false
+			},
+			"correctness": {
+				"noNodejsModules": "off"
 			}
 		}
 	},
