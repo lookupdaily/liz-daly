@@ -1,8 +1,8 @@
 {% from "./link.njk" import link %}
 
 <span hidden id="menu-label">Main menu</span>
-<button class="ld-header__menu-button" id="menu-button" aria-expanded="false"><span class="ld-header__menu-button-text">Menu</span></button>
-<nav class="ld-header-nav" id="menu" aria-labelledy="menu-label">
+<button class="ld-header__menu-button" id="ld-menu-button" aria-expanded="false"><span class="ld-header__menu-button-text">Menu</span></button>
+<nav class="ld-header-nav" id="ld-menu" aria-labelledy="menu-label">
   <ul class="ld-header-nav__list">
     <li class="ld-header-nav__item">
       <a class="ld-link ld-header-nav__link" href="/" {% if pageType == "home" %}data-state="active"{% endif %}><span class="nav__link__text">Home</span></a>
