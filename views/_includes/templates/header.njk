@@ -1,0 +1,5 @@
+<header class="ld-header {% if pageType == 'home' %}home{% endif %}" data-module="ld-header">
+    <div class="visually-hidden"><a href="#content">Skip to content</a></div>
+    <div class="ld-logo">{% if pageType !== "home" %}<a href="/" class="ld-logo__link">{% endif %}LD{% if pageType !== "home" %}</a>{% endif %}</div>
+  {% include "./menu.njk" %}
+</header>
