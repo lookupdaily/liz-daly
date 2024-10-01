@@ -1,17 +1,24 @@
-import { expect, test } from "@playwright/test";
+import { test } from "@playwright/test";
+import { CvPage } from "./page-object-model/cv-page";
+import { HomePage } from "./page-object-model/home-page";
 
-test("has title", async ({ page }) => {
-	await page.goto("/");
+test.describe("App", () => {
+	let homePage: HomePage;
+	test.beforeEach(({ page }) => {
+		homePage = new HomePage(page);
+	});
 
-	await expect(page).toHaveTitle(/Liz Daly/);
-});
+	test("go to homepage", async () => {
+		await homePage.goTo();
+		await homePage.expect.toBeOnPage();
+	});
 
-test("CV link", async ({ page }) => {
-	await page.goto("/");
+	test("has link to CV", async ({ page }) => {
+		const cvPage = new CvPage(page);
 
-	await page.getByRole("link", { name: "My CV" }).click();
+		await homePage.goTo();
+		await homePage.clickCvLink();
 
-	await expect(
-		page.getByRole("heading", { name: "Tech skills" }),
-	).toBeVisible();
+		await cvPage.expect.toBeOnPage();
+	});
 });
