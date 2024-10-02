@@ -38,6 +38,6 @@
 		"webpack-cli": "^5.1.4"
 	},
 	"dependencies": {
-		"@lookupdaily/styles": "^1.1.1"
+		"@lookupdaily/styles": "2.0.0"
 	}
 }
