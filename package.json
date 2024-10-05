@@ -24,7 +24,7 @@
 		"@axe-core/playwright": "^4.10.0",
 		"@babel/core": "^7.24.7",
 		"@babel/preset-env": "^7.24.7",
-		"@biomejs/biome": "1.8.3",
+		"@biomejs/biome": "1.9.2",
 		"@playwright/test": "^1.47.2",
 		"@types/node": "^22.7.4",
 		"axe-core": "^4.10.0",
