@@ -1,5 +1,3 @@
-{% from "./link.njk" import link %}
-
 <span hidden id="menu-label">Main menu</span>
 <button class="ld-header__menu-button" id="ld-menu-button" aria-controls="ld-menu" aria-expanded="false" aria-haspopup="true"><span class="ld-header__menu-button-text">Menu</span></button>
 <nav class="ld-header-nav" id="ld-menu" aria-labelledby="menu-label">
@@ -15,7 +13,7 @@
       <a class="ld-link ld-header-nav__link" href="/CV" {% if pageType == "cv" %}data-state="active"{% endif %}><span class="nav__link__text">CV</span></a>
     </li>
     <li class="ld-header-nav__item">
-      {{ link("GitHub", "https://github.com/lookupdaily", "ld-header-nav__link")}}
+      <a class="ld-link ld-header-nav__link" href="https://github.com/lookupdaily">GitHub</a>
     </li>
   </ul>
 </nav>
