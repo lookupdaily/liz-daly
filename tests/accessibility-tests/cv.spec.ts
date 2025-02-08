@@ -1,7 +1,7 @@
 import { test } from "@playwright/test";
 import { CvPage } from "../page-object-model/cv-page";
 
-test.describe("Accessibility - Home page", () => {
+test.describe("Accessibility - CV page", () => {
 	let cvPage: CvPage;
 	test.beforeEach(({ page }) => {
 		cvPage = new CvPage(page);

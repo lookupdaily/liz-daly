@@ -1,7 +1,7 @@
 import { test } from "@playwright/test";
 import { AboutPage } from "../page-object-model/about-page";
 
-test.describe("Accessibility - Home page", () => {
+test.describe("Accessibility - About page", () => {
 	let aboutPage: AboutPage;
 	test.beforeEach(({ page }) => {
 		aboutPage = new AboutPage(page);

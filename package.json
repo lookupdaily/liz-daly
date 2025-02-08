@@ -9,12 +9,15 @@
 		"watch:webpack": "webpack --watch --mode=development",
 		"build:webpack": "webpack --mode=production",
 		"build": "npm run build:webpack && npm run build:eleventy",
-		"start": "npm run watch:webpack & npm run watch:eleventy",
+		"start": "npm run watch:eleventy",
+		"start:watch": "npm run build:webpack & npm run watch:eleventy",
 		"lint": "npx @biomejs/biome ci .",
 		"lint:fix": "npx @biomejs/biome check --write .",
 		"test:e2e": "npx playwright test",
 		"test:e2e:trace": "npx playwright test --project='chromium' --trace='on'",
-		"test:e2e:ui": "npx playwright test --project='chromium' --ui"
+		"test:e2e:ui": "npx playwright test --project='chromium' --ui",
+		"docker:start": "docker compose -f docker/docker-compose.yml up --build -d",
+		"docker:stop": "docker compose -f docker/docker-compose.yml down"
 	},
 	"keywords": [],
 	"author": "",
