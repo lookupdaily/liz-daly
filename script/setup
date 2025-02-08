@@ -9,3 +9,6 @@ cd "$(dirname "$0")/.."
 
 echo "==> Installing JavaScript dependencies..."
 npm install
+
+echo "==> Installing Playwright dependencies..."
+npx playwright install
