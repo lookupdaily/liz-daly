@@ -10,7 +10,7 @@
 		"build:webpack": "webpack --mode=production",
 		"build": "npm run build:webpack && npm run build:eleventy",
 		"start": "npm run watch:eleventy",
-		"start:watch": "npm run build:webpack & npm run watch:eleventy",
+		"watch": "npm run watch:webpack & npm run watch:eleventy",
 		"lint": "npx @biomejs/biome ci .",
 		"lint:fix": "npx @biomejs/biome check --write .",
 		"test:e2e": "npx playwright test",
