@@ -9,66 +9,47 @@ description:  User focused web developer with a background in marketing for the 
 _______________
 ## Tech skills
 I am a quick learner of languages and frameworks. I believe that simple, well-documented and maintainable code is more important than language specialism.
-<dl class="ld-descriptive-list">
-  <dt>JavaScript</dt>
-  <dd>
-    ES6, TypeScript, Angular, React, Jest, Jasmine, Testing Library, Playwright
-  </dd>
 
-  <dt>CSS</dt>
-  <dd>SCSS (Sass), CSS3, Bootstrap, Responsive designs</dd>
+JavaScript
+: ES6, TypeScript, Angular, React, Jest, Jasmine, Testing Library, Playwright
 
-  <dt>HTML</dt>
-  <dd>Semantic mark-up, accessibility following WAI-Aria Standards</dd>
+CSS
+: SCSS (Sass), CSS3, Bootstrap, Responsive designs
 
-  <dt>C#</dt>
-  <dd>ASP.NET Core, LINQ, Entity Framework Core, XUnit, Nunit, Fluent Assertions</dd>
+HTML
+: Semantic mark-up, accessibility following WAI-Aria Standards
 
-  <dt>Ruby</dt>
-  <dd>Ruby on Rails, Sinatra, RSpec, Capybara</dd>
+C#
+: ASP.NET Core, LINQ, Entity Framework Core, XUnit, Nunit, Fluent Assertions
 
-  <dt>Other</dt>
-  <dd>Git, Azure, Docker, Xcode, Swagger, SQL Server, Travis CI, CircleCI,
-  pair programming, test driven development, peer reviews</dd>
-</dl>
+Ruby
+: Ruby on Rails, Sinatra, RSpec, Capybara
+
+Other
+: Git, Azure, Docker, Xcode, Swagger, SQL Server, Travis CI, CircleCI,
+pair programming, test driven development, peer reviews
+
 
 __________________
 
 ## Other skills
 
-<dl class="ld-descriptive-list">
-  <dt>Collaborator</dt>
-  <dd>
-    I am at my happiest working on projects that require cross-team collaboration, particularly with user researchers, designers, product owners, web developers and business analysts. 
-    I ask lots of questions and regularly present demos to clients and key stakeholders.
-  </dd>
 
-  <dt>User focused</dt>
-  <dd>
-    My communications experience has given me a passion for perfecting user experience, and championing inclusive design.
-    I regularly take part in product research and co-design sessions with users, as I believe having a fuller understanding of user needs leads to a better technical solution.
-  </dd>
-  
-  <dt>Process driven</dt>
-  <dd>
-    Whilst learning to code at Makers I rediscovered my love for a good diagram. You can find 
-    <a class="ld-link" href="https://github.com/lookupdaily/chitter-challenge">some examples of my approach</a> 
-    to developing solutions in my READMEs. I prefer to develop using TDD.
-  </dd>
+Collaborator
+: I am at my happiest working on projects that require cross-team collaboration, particularly with user researchers, designers, product owners, web developers and business analysts. I ask lots of questions and regularly present demos to clients and key stakeholders.  
 
-  <dt>Rapid learner</dt>
-  <dd>
-    I learn new languages and technologies quickly. 
-    At Cognizant I learnt Angular, .NET and Ionic for projects.
-    At dxw, I have honed my testing practices using Playwright, mutation testing and axe-core to improve my tests.
-    I taught myself Ruby and Rails before taking a 3 month boot camp with <a href="https://makers.tech/">Makers</a> to learn software engineering best practices, and have picked up new tooling regularly throughout my marketing career and architecture education. 
-  </dd>
-    
-  <dt>Creative</dt>
-  <dd>
-    I have a keen eye for design thanks to my background in architecture and design. I keep an open conversation with our UX teams to ensure consistent and usable design across our apps.
-  </dd>
-</dl>
+User focused
+: My communications experience has given me a passion for perfecting user experience, and championing inclusive design. I regularly take part in product research and co-design sessions with users, as I believe having a fuller understanding of user needs leads to a better technical solution.  
+
+Process driven
+: Whilst learning to code at Makers I rediscovered my love for a good diagram. You can find 
+  [some examples of my approach](https://github.com/lookupdaily/chitter-challenge) to developing solutions in my READMEs. I prefer to develop using TDD.  
+
+Rapid learner
+: I learn new languages and technologies quickly. At Cognizant I learnt Angular, .NET and Ionic for projects. At dxw, I have honed my testing practices using Playwright, mutation testing and axe-core to improve my tests. I taught myself Ruby and Rails before taking a 3 month boot camp with [Makers](https://makers.tech/) to learn software engineering best practices, and have picked up new tooling regularly throughout my marketing career and architecture education.  
+
+Creative
+: I have a keen eye for design thanks to my background in architecture and design. I keep an open conversation with our UX teams to ensure consistent and usable design across our apps.  
 
 ______________
 
