@@ -3,13 +3,13 @@ layout: layout.njk
 pageType: home
 title: Liz Daly
 metaTitle: Liz Daly - web developer
-description: Liz Daly is a front-end web developer interested in usability and inclusive design.
+description: A frontend web developer interested in usability and inclusive design.
 
 ---
 
 <div class="hero">   
   <header class="home__header">
-    <h1 class="title">{{ title }}</h1>
+    <h1 class="title">Liz Daly</h1>
     <p class="ld-text-subtitle">web developer.</p> 
   </header>
   <div>
