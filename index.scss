@@ -1,5 +1,13 @@
 @use "pkg:@lookupdaily/styles/sass" as ld;
 
+.ld-logo {
+  svg {
+    width: 2.5rem;
+    height: auto;
+    margin-bottom: -0.625rem;
+  }
+}
+
 /* Home page styles */
 
 .content.home {
