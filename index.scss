@@ -20,18 +20,16 @@
 
 /* CV Page styles */
 
-.cv__content section {
-  @include ld.padding("x-large", "none");
-}
-
-.experience-item {
-  @include ld.margin-bottom("x-large");
-
-  &__title {
-    margin-bottom: 0.3125rem;
+.cv__content {
+  p { 
+    @include ld.margin-top("none");
   }
 
-  &__dates {
-    margin-top: 0;
+  ul {
+    @include ld.margin-bottom("x-large");
+  }
+
+  h3 {
+    @include ld.margin-top("x-large");
   }
 }

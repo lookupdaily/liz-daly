@@ -28,7 +28,7 @@
             <p class="ld-text-subtitle">{{ description | safe }}</p>
           </div>
         {% endif %}
-        <div class="{% if pageType == 'cv' %}cv__content{% endif %}">
+        <div class="{% if pageType !== 'home' %}ld-md {% endif %}{% if pageType == 'cv' %}cv__content{% endif %}">
           {{ content | safe }}
         <div>
       </main>
