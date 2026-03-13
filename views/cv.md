@@ -60,12 +60,12 @@ January 2023-present
 
 I develop server rendered applications in line with [dxw's technology principles](https://playbook.dxw.com/tech/development-and-technical-operations-team-principles/) which implement the GOV.UK design system and prioritise user needs, accessibility and maintainability.  
 
-- Delivering a new Application Programming Interface (API) to enable easier access to and analysis of [UK Parliament's Members' Register of Financial Interests](https://pds.blog.parliament.uk/2024/11/27/working-towards-a-fully-searchable-register-of-members-financial-interests/), as well as improved access for members of the public via the Parliament website.
+- Delivered a new Application Programming Interface (API) to enable easier access to and analysis of [UK Parliament's Members' Register of Financial Interests](https://pds.blog.parliament.uk/2024/11/27/working-towards-a-fully-searchable-register-of-members-financial-interests/), as well as improved access for members of the public via the Parliament website.
 - Launched the private beta of new internal product [Find information about academies and trusts](https://github.com/DFE-Digital/find-information-about-academies-and-trusts) for the Department of Education, which helped relieve the team reliance on legacy technology. The project achieved a high System Usability Score (SUS), received glowing feedback in an early accessibility audit and has since gone into public beta.
 - Helped build and write content for dxw's first iteration of our [accessibility manual](https://accessibility.dxw.com/).
 
 ### Cognizant - Associate
-September 2020-December 2023
+September 2020-December 2022
 
 Supporting the national roll-out of several key products for Network Rail as part of [Intelligent Infrastructure](https://www.networkrail.co.uk/running-the-railway/intelligent-infrastructure/)—a five-year transformation programme focused on providing maintenance teams the insight they need to predict and prevent faults before they cause delays.  
 
