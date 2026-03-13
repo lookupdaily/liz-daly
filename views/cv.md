@@ -65,7 +65,7 @@ I develop server rendered applications in line with [dxw's technology principles
 - Helped build and write content for dxw's first iteration of our [accessibility manual](https://accessibility.dxw.com/).
 
 ### Cognizant - Associate
-September 2020-December 2023
+September 2020-December 2022
 
 Supporting the national roll-out of several key products for Network Rail as part of [Intelligent Infrastructure](https://www.networkrail.co.uk/running-the-railway/intelligent-infrastructure/)—a five-year transformation programme focused on providing maintenance teams the insight they need to predict and prevent faults before they cause delays.  
 
